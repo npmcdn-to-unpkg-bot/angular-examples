@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style/todolist.css">
 	<script type="text/javascript" 	src="angular-1.5.6/angular.min.js"></script>
-	<script type="text/javascript" 	src="angular.min.js"></script>
 	<script type="text/javascript" 	src="angular-animate.min.js"></script>
 	<script type="text/javascript"	src="angular-aria.min.js"></script>
 	<script type="text/javascript" 	src="app.js"></script>
@@ -17,9 +16,9 @@
 </head>
 <body>
 
-	<div class="container">
-		<div class="row col-xs-4 col-xs-offset-4 listContainer"  ng-app="ToDoList">
-			<table ng-controller="ListController as listCtrl" class="table table-striped">
+	<div class="container" ng-app="ToDoList" >
+		<div class="row col-xs-4 col-xs-offset-4 listContainer"  ng-controller="ListController as listCtrl">
+			<table  class="table table-striped">
 				<thead>
 					<h4 class="listHead">To Do List:</h4>
 				</thead>
@@ -29,17 +28,18 @@
 							<span>{{item}}</span>
 						</td>
 						<td class="taskBtn">
-							<input type="checkbox" name="done" value="done" class="input-group-btn">
+							<button type="submit" class="btn btn-success" ng-click="listCtrl.removeItem(item)"> Done </button>
 						</td>
 					</tr>
 				</tbody>	
 			</table>	
 			<div class="input-group">
-				<input type="text" class="form-control" aria-label="...">
+				<input type="text" class="form-control" aria-label="..." placeholder="Enter To Do ..." ng-model="listCtrl.newToDo">
 				<div class="input-group-btn">
-					<button type="button" class="btn btn-default " aria-haspopup="true" aria-expanded="false">Add Item</button>
+					<button type="submit" class="btn btn-default " ng-click="listCtrl.addItem()">Add Item</button>
 				</div><!-- /btn-group -->
-			</div><!-- /input-group -->
+			</div>
+			
 		</div>
 	</div>
 </body>
