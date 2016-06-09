@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- all dependecies -->
+	<link rel="stylesheet" type="text/css" href="angular-material.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/todolist.css">
+	<script type="text/javascript" 	src="angular-1.5.6/angular.min.js"></script>
+	<script type="text/javascript" 	src="angular.min.js"></script>
+	<script type="text/javascript" 	src="angular-animate.min.js"></script>
+	<script type="text/javascript"	src="angular-aria.min.js"></script>
+	<script type="text/javascript" 	src="app.js"></script>
+
+
+	<!-- regular head elements -->
+	<title>Random Angular Stuff</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row col-xs-4 col-xs-offset-4 listContainer"  ng-app="ToDoList">
+			<table ng-controller="ListController as listCtrl" class="table table-striped">
+				<thead>
+					<h4 class="listHead">To Do List:</h4>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in listCtrl.items" class="listItem input-group">
+						<td class="taskText">
+							<span>{{item}}</span>
+						</td>
+						<td class="taskBtn">
+							<input type="checkbox" name="done" value="done" class="input-group-btn">
+						</td>
+					</tr>
+				</tbody>	
+			</table>	
+			<div class="input-group">
+				<input type="text" class="form-control" aria-label="...">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default " aria-haspopup="true" aria-expanded="false">Add Item</button>
+				</div><!-- /btn-group -->
+			</div><!-- /input-group -->
+		</div>
+	</div>
+</body>
+</html>
