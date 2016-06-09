@@ -1,0 +1,43 @@
+.to-do-list{
+
+
+}
+.listHead{
+	margin:auto;
+	text-align: center;
+	font-size: 24px;
+	padding-bottom:20px;
+}
+.listItem{
+
+	padding:0px 0px ;
+	list-style-type: none;
+	margin:10px;
+	width: 100%;
+	max-width:90%;
+	font-weight: bold;
+
+}
+.addItem{
+	margin:auto;
+	
+}
+.listContainer{
+	border: 2px grey solid;
+	padding:20px;
+	margin-top:20px;
+}
+.taskText{
+	width:100%;
+	max-width: 100%;
+	display:inline-block;
+	word-wrap: break-all;
+}
+.taskBtn{
+	width:15%;
+}
+.preview{
+	border: 1px grey solid;
+	width:100%;
+	margin-top: 10px;
+}
