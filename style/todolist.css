@@ -16,6 +16,7 @@
 	width: 100%;
 	max-width:90%;
 	font-weight: bold;
+
 }
 .addItem{
 	margin:auto;
@@ -27,8 +28,10 @@
 	margin-top:20px;
 }
 .taskText{
-	width:85%;
-	max-width: 80%
+	width:100%;
+	max-width: 100%;
+	display:inline-block;
+	word-wrap: break-all;
 }
 .taskBtn{
 	width:15%;
