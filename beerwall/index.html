@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Beer Wall</title>
+
+    <!-- All Javascript -->
+    <script type="text/javascript" src="../angular-1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="controllers/BeerWall.js"></script>
+
+    <!-- All Styling -->
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style/beer-box.css">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+  </head>
+  <body>
+  
+  	<div class="container main-div fill" ng-app="BeerWall">
+  		<div ng-controller="wallController as wallCtrl">
+  			<div class="beer-box" ng-repeat="label in wallCtrl.labels">
+  				<img class="col-md-4 " ng-src="{{label}}">
+  			</div>
+  		</div>
+  	</div>
+
+  </body>
+</html>
